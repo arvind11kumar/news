@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+<style>
+   .outerdiv {
+display: flex;
+    float:left;
+height: 100%;
+width:100%;
+
+}
+
+.outerdiv >.sec20{
+
+height: inherit;
+width: 20%;
+
+}
+.outerdiv >.sec60{
+
+height: auto;
+width: 60%;
+
+}
+.outerdiv >.sec20{
+height: auto;
+width: 20%;
+
+}
+
+.mavbar{
+    display: flex;
+border: 2px solid black;
+height: 50px;
+width: 100%;
+background-color: aquamarine;
+justify-content: space-around;
+}
+.mavbar> div{
+padding: 10px;
+    background-color: azure;
+}
+.fot{
+display: flex;
+align-items: baseline;
+border: 2px solid black;
+height:auto;
+width: 100%;
+background-color: black;
+color:white;
+}
+
+
+
+</style>
+
+
+    </head>
+<body>
+    <nav class="mavbar">
+        <div ><a href="home.html">home</a></div>
+        
+        <div><a href="menu.html">menu</a> </div>
+        <div><a href="about.html">about us</a></div>
+       
+    </nav>
+
+
+
+    <div class="outerdiv">
+        <div class="sec20"> </div>
+        <div class="sec60"> </div>
+        <div class="sec20"></div>
+    </div>
+
+    <div class="fot">
+    <ul>
+        <li>contact us</li>
+    <li> support</li>
+    <li>know more</li>
+    </ul>
+</div>
+
+</body>
+    <script>
+URL ='https://jsonplaceholder.typicode.com/posts'
+const urldata=fetch(URL) .then((res)=>{
+ 
+ return res.json();
+
+}).then((urldata)=>{
+
+  console.log(urldata);
+
+urldata.forEach(Element=>{
+    console.log(Element.title);
+
+//////////////////////////////////////////////////////
+let firstdiv= document.querySelector(".sec60");
+let h2gat=document.createElement("h2");
+h2gat.innerText=Element.title;
+firstdiv.appendChild(h2gat);
+let paragaraph=document.createElement('p');
+paragaraph.innerText=Element.body;
+firstdiv.appendChild(paragaraph);
+
+//////////////////////////////////////////////////////////
+
+
+})
+
+}).catch(()=>{
+
+console.log("upper method not runing")
+
+});
+
+
+    </script>
+
+
+
+</html>
