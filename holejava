@@ -1,0 +1,105 @@
+// var lineone =[ "my", "name", "is", "arvind" ,"and", "my" ,"chanal", "name", "is" ,"tech"]
+// var linetwo =["my" ,"menter", "is", "arnab" ,"kumar", "and", "he", "is" ,"best" ,"teacher"]
+// //console.log(...lineone);
+// //console.log(...linetwo)
+// //console.log(lineone+linetwo)
+/////////////////////////////////////////////////////////
+//string converting into array and///////////////////
+//var word ="my name is mukesh and doing my work".split(" ");
+//lineone.split("");
+//console.log(word);
+//////////////////////////////////////////////////////
+//converting array into array////spread operater
+// console.log(...word); //sprade operater
+// let [a,b,c,...d]=word;//rest operater
+// console.log(a,d); 
+/////////////////////////////////////////////////
+// function sum(x,y,z){
+//     return(x+y+z)
+// }
+// let num=(5,6,7);
+// console.log(num)
+// console.log(sum(5,6,7))
+//////////////////////////////////////////////////
+//filter function************************** */
+// let arr="45789655356621422".split("");
+// const filterred= arr.filter((e)=>{
+//     return e>=6
+// })
+// console.log(filterred)
+
+//////////////////////////////////////////////
+
+//********object destractring///******************* */
+// const pershon ={name:"arvind" ,age:12, gender:"male",
+//  }
+// console.log(pershon.name);
+
+// function a(pershon){
+//     return name;
+// }
+//man={name:"radha", age:47}
+// console.log(a())
+//console.log(a.name);//////////////////////////////////
+//**************mapmethod()************************* */
+
+// let arry="45789655356621422".split("");
+// const arryofnumber =arry.map((e)=>{return Number(e);})
+//console.log(arryofnumber);
+///////////////////////////////////////////////////////
+
+// let foreach= arryofnumber.forEach((e)=>{
+//     return ec;
+// })
+// console.log(foreach);
+///////////////////////////////////////////////////////////////////////
+//////////////////////************using map()****************** */
+let array="my name is arvind kumar and my chanal name is tech".split(" ");
+let array2="my name is mukesh kumar and my chanal name is count".split(" ");
+
+array.map((elm,index)=>{
+    let compare=array2[index]===elm;
+//console.log(!compare)
+//console.log(true,"this is true text")
+    if( !compare===true){
+       console.log("not true")
+      // document.body.style.background="red";
+        // green()
+    }
+    else{
+    //  red()
+    console.log("it is true function")
+   // document.body.style.backgroundColor="green";
+    }
+
+   
+
+    // if(!elm==compare){
+    //     return true
+    // }else false
+})
+//////////////////////////////////////////////////////////////////
+/////******************using foreach***************************** */
+// array.forEach((e,index)=>{
+
+//     let comp=array2[index]===e;
+//     console.log(comp)
+// })
+///////////////////////////////////////////////////////////////////////////
+/////////////*********************include()methode********************* */
+
+function green(){
+    let body1=document.querySelector(".firstdiv");
+    let doc1=document.createElement("h2");
+    doc1.innerText="my name is arvind";
+    body1.appendChild(doc1);
+
+}
+
+function red(){
+    let body1=document.querySelector(".firstdiv");
+    let doc1=document.createElement("h2");
+    doc1.innerText="my name is my mukesh";
+    body1.appendChild(doc1);
+
+}
